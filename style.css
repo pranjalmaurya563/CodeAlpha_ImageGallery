@@ -1,0 +1,627 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(78, 115, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(0, 220, 180, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #070b14,
+            #0d1322 50%,
+            #080c15
+        );
+
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    text-align: center;
+    padding: 55px 20px 30px;
+}
+
+.header h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #7ea7ff,
+        #5fffd7
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 25px rgba(95, 255, 215, 0.15);
+}
+
+.header p {
+    color: #aeb7c9;
+    font-size: 18px;
+}
+
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    position: relative;
+
+    padding: 11px 23px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #aeb7c9;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-3px);
+
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border-color: rgba(126, 167, 255, 0.35);
+
+    box-shadow:
+        0 7px 20px rgba(0, 0, 0, 0.25),
+        0 0 15px rgba(80, 150, 255, 0.10);
+}
+
+.filter-btn.active {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #5878ff,
+        #35d6b0
+    );
+
+    border-color: transparent;
+
+    box-shadow:
+        0 6px 22px rgba(70, 130, 255, 0.30),
+        0 0 20px rgba(53, 214, 176, 0.12);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto 50px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =========================
+   GALLERY CARD
+========================= */
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(10px);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px) scale(1.01);
+
+    border-color: rgba(120, 170, 255, 0.45);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(80, 150, 255, 0.16);
+}
+
+
+/* =========================
+   IMAGE WRAPPER
+========================= */
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================
+   GALLERY IMAGE
+========================= */
+
+.gallery-item img {
+    width: 100%;
+    height: 260px;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter:
+        brightness(0.92)
+        contrast(1.08)
+        saturate(1.12);
+
+    transition:
+        transform 0.6s ease,
+        filter 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+
+    filter:
+        brightness(1)
+        contrast(1.12)
+        saturate(1.2);
+}
+
+
+/* =========================
+   IMAGE OVERLAY
+========================= */
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    pointer-events: none;
+}
+
+.image-overlay span {
+    padding: 11px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 30px;
+
+    background: rgba(20, 30, 50, 0.65);
+
+    backdrop-filter: blur(10px);
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow:
+        0 0 20px rgba(80, 150, 255, 0.2);
+
+    transform: translateY(10px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.gallery-item:hover .image-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .image-overlay span {
+    transform: translateY(0);
+
+    background: linear-gradient(
+        135deg,
+        rgba(88, 120, 255, 0.85),
+        rgba(53, 214, 176, 0.85)
+    );
+
+    border-color: transparent;
+
+    box-shadow:
+        0 0 25px rgba(88, 120, 255, 0.35);
+}
+
+
+/* =========================
+   IMAGE INFORMATION
+========================= */
+
+.image-info {
+    padding: 17px 16px 18px;
+
+    background: rgba(10, 15, 25, 0.75);
+
+    backdrop-filter: blur(8px);
+}
+
+.image-info h3 {
+    color: #ffffff;
+
+    font-size: 18px;
+
+    margin-bottom: 7px;
+
+    line-height: 1.2;
+}
+
+.image-info p {
+    color: #8fa0ba;
+
+    font-size: 14px;
+
+    line-height: 1.2;
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   LIGHTBOX CONTENT
+========================= */
+
+.lightbox-content {
+    text-align: center;
+
+    transform: scale(0.8);
+
+    transition: transform 0.3s ease;
+
+    position: relative;
+    z-index: 1001;
+}
+
+.lightbox.active .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-content img {
+    max-width: 75vw;
+    max-height: 75vh;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-content h2 {
+    margin-top: 15px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+
+/* =========================
+   LIGHTBOX BUTTONS
+========================= */
+
+.close-btn,
+.prev-btn,
+.next-btn {
+    position: absolute;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: none;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+
+    z-index: 1002;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+}
+
+.prev-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.next-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close-btn {
+    top: 25px;
+    right: 30px;
+}
+
+
+/* =========================
+   PREVIOUS BUTTON
+========================= */
+
+.prev-btn {
+    left: 30px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================
+   NEXT BUTTON
+========================= */
+
+.next-btn {
+    right: 30px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 40px 15px 25px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .filters {
+        gap: 8px;
+        margin-bottom: 28px;
+        padding: 0 10px;
+    }
+
+    .filter-btn {
+        padding: 9px 17px;
+        font-size: 14px;
+    }
+
+    .gallery {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .gallery-item img {
+        height: 230px;
+    }
+
+
+    /* Lightbox */
+
+    .lightbox {
+        padding: 10px;
+    }
+
+    .lightbox-content {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lightbox-content img {
+        width: 82vw;
+        max-width: 82vw;
+        max-height: 65vh;
+
+        object-fit: contain;
+    }
+
+    .lightbox-content h2 {
+        font-size: 20px;
+        margin-top: 12px;
+        max-width: 75vw;
+    }
+
+
+    /* Mobile Lightbox Buttons */
+
+    .prev-btn,
+    .next-btn,
+    .close-btn {
+    width: 42px;
+    height: 42px;
+
+    font-size: 24px;
+
+    z-index: 1003;
+}
+
+    .prev-btn {
+    left: 5px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.next-btn {
+    right: 5px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.close-btn {
+    top: 15px;
+    right: 15px;
+}
+
+}

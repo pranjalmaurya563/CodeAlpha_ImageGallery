@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+        <h1>Image Gallery</h1>
+        <p>Explore beautiful moments</p>
+    </header>
+
+
+    <!-- =========================
+         CATEGORY FILTERS
+    ========================== -->
+
+    <section class="filters">
+
+        <button class="filter-btn active" data-category="all">
+            All
+        </button>
+
+        <button class="filter-btn" data-category="nature">
+            Nature
+        </button>
+
+        <button class="filter-btn" data-category="animals">
+            Animals
+        </button>
+
+        <button class="filter-btn" data-category="travel">
+            Travel
+        </button>
+
+        <button class="filter-btn" data-category="city">
+            City
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <main class="gallery">
+
+
+        <!-- =========================
+             NATURE
+        ========================== -->
+
+        <div class="gallery-item" data-category="nature">
+
+            <div class="image-wrapper">
+                <img src="images/nature1.jpg" alt="Beautiful nature">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Beautiful Nature</h3>
+                <p>Nature</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="nature">
+
+            <div class="image-wrapper">
+                <img src="images/nature2.jpg" alt="Mountain landscape">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Mountain View</h3>
+                <p>Nature</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="nature">
+
+            <div class="image-wrapper">
+                <img src="images/nature3.jpg" alt="Forest landscape">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Forest Escape</h3>
+                <p>Nature</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="nature">
+
+            <div class="image-wrapper">
+                <img src="images/nature4.jpg" alt="Beautiful lake">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Peaceful Lake</h3>
+                <p>Nature</p>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             TRAVEL
+        ========================== -->
+
+        <div class="gallery-item" data-category="travel">
+
+            <div class="image-wrapper">
+                <img src="images/travel1.jpg" alt="Travel destination">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Travel Destination</h3>
+                <p>Travel</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="travel">
+
+            <div class="image-wrapper">
+                <img src="images/travel2.jpg" alt="Beautiful road">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Road Trip</h3>
+                <p>Travel</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="travel">
+
+            <div class="image-wrapper">
+                <img src="images/travel3.jpg" alt="Beautiful beach">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Beach Journey</h3>
+                <p>Travel</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="travel">
+
+            <div class="image-wrapper">
+                <img src="images/travel4.jpg" alt="Travel adventure">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Adventure Trip</h3>
+                <p>Travel</p>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             CITY
+        ========================== -->
+
+        <div class="gallery-item" data-category="city">
+
+            <div class="image-wrapper">
+                <img src="images/city2.jpg" alt="City buildings">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>City Lights</h3>
+                <p>City</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="city">
+
+            <div class="image-wrapper">
+                <img src="images/city1.jpg" alt="Modern city">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Modern City</h3>
+                <p>City</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="city">
+
+            <div class="image-wrapper">
+                <img src="images/city3.jpg" alt="City architecture">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Urban Architecture</h3>
+                <p>City</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="city">
+
+            <div class="image-wrapper">
+                <img src="images/city4.jpg" alt="City skyline">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>City Skyline</h3>
+                <p>City</p>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ANIMALS
+        ========================== -->
+
+        <div class="gallery-item" data-category="animals">
+
+            <div class="image-wrapper">
+                <img src="images/animal1.jpg" alt="Wild animal">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Wild Adventure</h3>
+                <p>Animals</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="animals">
+
+            <div class="image-wrapper">
+                <img src="images/animal2.jpg" alt="Beautiful animal">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Wildlife Moment</h3>
+                <p>Animals</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="animals">
+
+            <div class="image-wrapper">
+                <img src="images/animal3.jpg" alt="Animal in nature">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Into the Wild</h3>
+                <p>Animals</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="animals">
+
+            <div class="image-wrapper">
+                <img src="images/animal4.jpg" alt="Wildlife photography">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Wildlife Beauty</h3>
+                <p>Animals</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="animals">
+
+            <div class="image-wrapper">
+                <img src="images/animal5.jpg" alt="Wildlife photography">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Elephant</h3>
+                <p>Animals</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="animals">
+
+            <div class="image-wrapper">
+                <img src="images/animal6.jpg" alt="Wildlife photography">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Spotted Deer</h3>
+                <p>Animals</p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item" data-category="animals">
+
+            <div class="image-wrapper">
+                <img src="images/animal7.jpg" alt="Bird">
+
+                <div class="image-overlay">
+                    <span>View Image</span>
+                </div>
+            </div>
+
+            <div class="image-info">
+                <h3>Hummingbird</h3>
+                <p>Animals</p>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         LIGHTBOX
+    ========================== -->
+
+    <div class="lightbox" id="lightbox">
+
+        <button class="close-btn" id="closeBtn">
+            &times;
+        </button>
+
+        <button class="prev-btn" id="prevBtn">
+            &#10094;
+        </button>
+
+        <div class="lightbox-content">
+
+            <img id="lightboxImage" src="" alt="">
+
+            <h2 id="lightboxTitle"></h2>
+
+        </div>
+
+        <button class="next-btn" id="nextBtn">
+            &#10095;
+        </button>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
