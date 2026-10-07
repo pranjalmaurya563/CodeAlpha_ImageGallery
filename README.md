@@ -81,11 +81,6 @@ cd CodeAlpha_ImageGallery
 You can also use Live Server in VS Code.
 
 ---
-## 🎯 CodeAlpha Internship
-This project was developed as Task 1: Image Gallery during my CodeAlpha Frontend Development Internship.
-The project implements image gallery design, JavaScript navigation, lightbox functionality, hover effects, smooth transitions, responsive design and category-based filtering.
-
----
 
 ## 📌 Future Improvements
 - Add more image categories
