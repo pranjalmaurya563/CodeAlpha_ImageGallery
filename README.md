@@ -1,4 +1,4 @@
-<img width="1342" height="642" alt="image" src="https://github.com/user-attachments/assets/0df7cdad-6a7d-488b-b22e-1e333f5fcea6" /># 🖼️ CodeAlpha Image Gallery
+## 🖼️ CodeAlpha Image Gallery
 
 A clean and modern **responsive image gallery** built using HTML, CSS and JavaScript as part of the **CodeAlpha Frontend Development Internship**.
 
@@ -32,8 +32,8 @@ This project focuses on creating an interactive gallery with category filters, i
 
 ## 📸 Preview
 
-(<img width="1342" height="642" alt="image" src="https://github.com/user-attachments/assets/a15b05e4-8b04-4a03-b199-8b5b7ed4e2df" />
-)
+<img width="1342" height="642" alt="image" src="https://github.com/user-attachments/assets/a15b05e4-8b04-4a03-b199-8b5b7ed4e2df" />
+
 
 ---
 
@@ -67,11 +67,11 @@ CodeAlpha_ImageGallery/
     ├── animal6.jpg
     ├── animal7.jpg
     └── preview.png
+
+---
 ## ⚙️ How to Run Locally
 
 1. Clone the repository:
-
-```bash
 git clone https://github.com/pranjalmaurya563/CodeAlpha_ImageGallery.git
 
 2. Open the project folder:
@@ -80,11 +80,14 @@ cd CodeAlpha_ImageGallery
 3. Open index.html in your browser.
 You can also use Live Server in VS Code.
 
+---
 ## 🎯 CodeAlpha Internship
 This project was developed as Task 1: Image Gallery during my CodeAlpha Frontend Development Internship.
 The project implements image gallery design, JavaScript navigation, lightbox functionality, hover effects, smooth transitions, responsive design and category-based filtering.
 
-📌 Future Improvements
+---
+
+## 📌 Future Improvements
 - Add more image categories
 - Add image search functionality
 - Add image download option
@@ -92,5 +95,7 @@ The project implements image gallery design, JavaScript navigation, lightbox fun
 - Improve accessibility
 - Add more advanced animations
 
-👨‍💻 Author
+---
+
+## 👨‍💻 Author
 Pranjal Maurya
