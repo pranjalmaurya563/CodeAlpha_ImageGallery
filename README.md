@@ -67,10 +67,11 @@ CodeAlpha_ImageGallery/
     ├── animal6.jpg
     ├── animal7.jpg
     └── preview.png
----
 ## ⚙️ How to Run Locally
----
+
 1. Clone the repository:
+
+```bash
 git clone https://github.com/pranjalmaurya563/CodeAlpha_ImageGallery.git
 
 2. Open the project folder:
