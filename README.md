@@ -46,7 +46,7 @@ CodeAlpha_ImageGallery/
 │── script.js
 │── README.md
 │
-└── images/
+└── Images/
     ├── nature1.jpg
     ├── nature2.jpg
     ├── nature3.jpg
